@@ -58,8 +58,12 @@ Ejecución
 Iniciar la aplicación en modo desarrollo:
 
 npm run dev
-# o
-yarn dev
+
+#Y
+
+Inicializar el servidor:
+
+npm run server
 
 Abrir en el navegador:
 
