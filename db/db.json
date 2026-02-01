@@ -1,0 +1,231 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Manzana Roja",
+      "price": 25,
+      "stock": 40,
+      "expirationDate": "2026-02-20"
+    },
+    {
+      "id": "2",
+      "name": "Plátano",
+      "price": 18,
+      "stock": 30,
+      "expirationDate": "2026-02-05"
+    },
+    {
+      "id": "3",
+      "name": "Naranja",
+      "price": 20,
+      "stock": 20,
+      "expirationDate": "2026-02-02"
+    },
+    {
+      "id": "4",
+      "name": "Pera",
+      "price": 28,
+      "stock": 20,
+      "expirationDate": "2026-01-31"
+    },
+    {
+      "id": "5",
+      "name": "Uva Verde",
+      "price": 45,
+      "stock": 10,
+      "expirationDate": "2026-02-01"
+    },
+    {
+      "id": "6",
+      "name": "Fresa",
+      "price": 55,
+      "stock": 10,
+      "expirationDate": "2026-01-29"
+    },
+    {
+      "id": "7",
+      "name": "Sandía",
+      "price": 35,
+      "stock": 8,
+      "expirationDate": "2026-02-15"
+    },
+    {
+      "id": "8",
+      "name": "Melón",
+      "price": 32,
+      "stock": 6,
+      "expirationDate": "2026-02-08"
+    },
+    {
+      "id": "9",
+      "name": "Piña",
+      "price": 40,
+      "stock": 9,
+      "expirationDate": "2026-02-03"
+    },
+    {
+      "id": "10",
+      "name": "Mango",
+      "price": 30,
+      "stock": 20,
+      "expirationDate": "2026-01-30"
+    },
+    {
+      "id": "11",
+      "name": "Papaya",
+      "price": 27,
+      "stock": 14,
+      "expirationDate": "2026-02-12"
+    },
+    {
+      "id": "12",
+      "name": "Kiwi",
+      "price": 22,
+      "stock": 18,
+      "expirationDate": "2026-02-18"
+    },
+    {
+      "id": "13",
+      "name": "Limón",
+      "price": 15,
+      "stock": 50,
+      "expirationDate": "2026-03-01"
+    },
+    {
+      "id": "14",
+      "name": "Durazno",
+      "price": 33,
+      "stock": 11,
+      "expirationDate": "2026-01-28"
+    },
+    {
+      "id": "15",
+      "name": "Papaya",
+      "price": 60,
+      "stock": 5,
+      "expirationDate": "2026-01-27"
+    },
+    {
+      "id": "16",
+      "name": "Granada",
+      "price": 80,
+      "stock": 50,
+      "expirationDate": "2026-02-01"
+    },
+    {
+      "id": "17",
+      "name": "Toronja",
+      "price": 45,
+      "stock": 26,
+      "expirationDate": "2026-02-08"
+    },
+    {
+      "id": "18",
+      "name": "Tomate",
+      "price": 12,
+      "stock": 40,
+      "expirationDate": "2026-02-10"
+    },
+    {
+      "id": "19",
+      "name": "Uva Morada",
+      "price": 60,
+      "stock": 33,
+      "expirationDate": "2026-02-10"
+    }
+  ],
+  "entries": [
+    {
+      "id": "9db3",
+      "productId": 1,
+      "quantity": 1,
+      "date": "2026-01-31T04:35:31.990Z"
+    },
+    {
+      "id": "a425",
+      "productId": 1,
+      "quantity": 2,
+      "date": "2026-01-31T04:36:01.060Z"
+    },
+    {
+      "id": "c31f",
+      "productId": 1,
+      "quantity": 1,
+      "date": "2026-01-31T17:05:31.844Z"
+    },
+    {
+      "id": "d82c",
+      "productId": 17,
+      "quantity": 1,
+      "date": "2026-01-31T19:31:14.258Z"
+    },
+    {
+      "id": "90d2",
+      "productId": null,
+      "quantity": null,
+      "date": "2026-02-01T01:40:18.999Z"
+    },
+    {
+      "id": "90af",
+      "productId": 1,
+      "quantity": 1,
+      "date": "2026-02-01T01:49:00.717Z"
+    },
+    {
+      "id": "bedb",
+      "productId": 19,
+      "quantity": 10,
+      "date": "2026-02-01T01:54:43.812Z"
+    },
+    {
+      "id": "fec3",
+      "productId": 4,
+      "quantity": 5,
+      "date": "2026-02-01T02:17:18.135Z"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "9c1d",
+      "productId": 1,
+      "quantity": 1,
+      "date": "2026-01-31T04:35:43.283Z"
+    },
+    {
+      "id": "666f",
+      "productId": 1,
+      "quantity": 2,
+      "date": "2026-01-31T04:35:54.146Z"
+    },
+    {
+      "id": "79bc",
+      "productId": 1,
+      "quantity": 1,
+      "date": "2026-01-31T17:05:40.374Z"
+    },
+    {
+      "id": "77da",
+      "productId": 17,
+      "quantity": 5,
+      "date": "2026-01-31T19:31:25.795Z"
+    },
+    {
+      "id": "6ae3",
+      "productId": 1,
+      "quantity": 1,
+      "date": "2026-02-01T02:16:59.578Z"
+    },
+    {
+      "id": "c64a",
+      "productId": 3,
+      "quantity": 5,
+      "date": "2026-02-01T02:17:30.364Z"
+    },
+    {
+      "id": "2af2",
+      "productId": 5,
+      "quantity": 2,
+      "date": "2026-02-01T02:19:24.664Z"
+    }
+  ]
+}

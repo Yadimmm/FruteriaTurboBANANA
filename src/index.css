@@ -1,0 +1,669 @@
+:root {
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  /* Paleta de colores personalizada */
+  --primary-color: #1890ff;
+  --success-color: #52c41a;
+  --warning-color: #faad14;
+  --error-color: #ff4d4f;
+  --info-color: #1890ff;
+
+  /* Colores de fondo */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0f2f5;
+  --bg-tertiary: #fafafa;
+
+  /* Gradientes */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-success: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  --gradient-warning: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-info: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+
+  /* Sombras */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.16);
+
+  /* Espaciado */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  color-scheme: light;
+  color: rgba(0, 0, 0, 0.85);
+  background-color: #f0f2f5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-secondary);
+  overflow-x: hidden;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selección de texto personalizada */
+::selection {
+  background-color: rgba(24, 144, 255, 0.2);
+  color: inherit;
+}
+
+::-moz-selection {
+  background-color: rgba(24, 144, 255, 0.2);
+  color: inherit;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* ============================================
+   MEJORAS DE CARDS Y ESTADÍSTICAS
+   ============================================ */
+
+/* Cards con elevación y hover mejorado */
+.ant-card {
+  border-radius: var(--radius-lg) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  overflow: hidden;
+}
+
+.ant-card:hover {
+  box-shadow: var(--shadow-md) !important;
+  transform: translateY(-2px);
+  border-color: rgba(24, 144, 255, 0.2) !important;
+}
+
+/* Card headers con mejor tipografía */
+.ant-card-head {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.06) !important;
+  background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%) !important;
+  padding: 16px 24px !important;
+}
+
+.ant-card-head-title {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Estadísticas con animación */
+.ant-statistic {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ant-statistic-title {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: rgba(0, 0, 0, 0.65) !important;
+  margin-bottom: 8px !important;
+}
+
+.ant-statistic-content {
+  font-weight: 600 !important;
+}
+
+/* Resaltado UX para tabla de productos */
+.row-expired td {
+  background: rgba(255, 77, 79, 0.1);
+  animation: pulseRed 2s ease-in-out infinite;
+}
+
+.row-expiring td {
+  background: rgba(250, 173, 20, 0.1);
+  animation: pulseOrange 2s ease-in-out infinite;
+}
+
+.row-lowstock td {
+  background: rgba(255, 77, 79, 0.06);
+}
+
+@keyframes pulseRed {
+  0%,
+  100% {
+    background: rgba(255, 77, 79, 0.1);
+  }
+  50% {
+    background: rgba(255, 77, 79, 0.15);
+  }
+}
+
+@keyframes pulseOrange {
+  0%,
+  100% {
+    background: rgba(250, 173, 20, 0.1);
+  }
+  50% {
+    background: rgba(250, 173, 20, 0.15);
+  }
+}
+
+/* Mejoras UX/UI para el Sidebar */
+.ant-layout-sider {
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Mejora de items del menú */
+.ant-menu-dark .ant-menu-item {
+  margin: 4px 8px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+}
+
+.ant-menu-dark .ant-menu-item:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateX(4px);
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background: linear-gradient(
+    90deg,
+    rgba(24, 144, 255, 0.8) 0%,
+    rgba(24, 144, 255, 0.6) 100%
+  ) !important;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+  font-weight: 600;
+}
+
+.ant-menu-dark .ant-menu-item-selected::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  background: #fff;
+  border-radius: 2px 0 0 2px;
+}
+
+/* Iconos del menú */
+.ant-menu-dark .ant-menu-item .anticon {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.ant-menu-dark .ant-menu-item:hover .anticon {
+  transform: scale(1.1);
+}
+
+.ant-menu-dark .ant-menu-item-selected .anticon {
+  color: #fff;
+}
+
+/* Botón de colapsar sidebar */
+.ant-layout-sider-trigger {
+  background: linear-gradient(180deg, #002140 0%, #001529 100%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.ant-layout-sider-trigger:hover {
+  background: linear-gradient(180deg, #003a5d 0%, #002140 100%) !important;
+}
+
+/* Animación suave para el contenido */
+.ant-layout-content > div {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mejora de scrollbar en sidebar */
+.ant-layout-sider::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ant-layout-sider::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.ant-layout-sider::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.ant-layout-sider::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   MEJORAS DE BOTONES
+   ============================================ */
+
+.ant-btn {
+  border-radius: var(--radius-md) !important;
+  font-weight: 500 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.ant-btn-primary {
+  background: var(--gradient-info) !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3) !important;
+}
+
+.ant-btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(24, 144, 255, 0.4) !important;
+}
+
+.ant-btn-primary:active {
+  transform: translateY(0) !important;
+}
+
+.ant-btn-default:hover {
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md) !important;
+}
+
+.ant-btn-dangerous {
+  box-shadow: 0 4px 12px rgba(255, 77, 79, 0.2) !important;
+}
+
+.ant-btn-dangerous:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(255, 77, 79, 0.3) !important;
+}
+
+/* ============================================
+   MEJORAS DE TABLAS
+   ============================================ */
+
+.ant-table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.ant-table {
+  min-width: 600px;
+}
+
+.ant-table-thead > tr > th {
+  background: linear-gradient(to bottom, #fafafa 0%, #f5f5f5 100%) !important;
+  font-weight: 600 !important;
+  color: rgba(0, 0, 0, 0.85) !important;
+  border-bottom: 2px solid #e8e8e8 !important;
+  padding: 16px !important;
+}
+
+.ant-table-tbody > tr {
+  transition: all 0.3s ease !important;
+}
+
+.ant-table-tbody > tr:hover {
+  background: rgba(24, 144, 255, 0.04) !important;
+  transform: scale(1.001);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.ant-table-tbody > tr > td {
+  padding: 14px 16px !important;
+}
+
+/* Paginación mejorada */
+.ant-pagination {
+  margin-top: 24px !important;
+}
+
+.ant-pagination-item {
+  border-radius: var(--radius-sm) !important;
+  transition: all 0.3s ease !important;
+}
+
+.ant-pagination-item:hover {
+  border-color: var(--primary-color) !important;
+  transform: translateY(-2px);
+}
+
+.ant-pagination-item-active {
+  background: var(--gradient-info) !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3) !important;
+}
+
+.ant-pagination-item-active a {
+  color: white !important;
+}
+
+/* Mejora de botones en móvil */
+@media (max-width: 768px) {
+  .ant-btn {
+    font-size: 14px;
+    padding: 4px 12px;
+  }
+
+  .ant-space-item {
+    margin-bottom: 8px;
+  }
+}
+
+/* ============================================
+   MEJORAS DE TAGS Y BADGES
+   ============================================ */
+
+.ant-tag {
+  border-radius: var(--radius-md) !important;
+  padding: 4px 12px !important;
+  font-weight: 500 !important;
+  border: none !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s ease !important;
+}
+
+.ant-tag:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* Tags con gradientes */
+.ant-tag-green {
+  background: var(--gradient-success) !important;
+  color: white !important;
+}
+
+.ant-tag-orange {
+  background: var(--gradient-warning) !important;
+  color: white !important;
+}
+
+.ant-tag-red {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%) !important;
+  color: white !important;
+}
+
+.ant-tag-blue {
+  background: var(--gradient-info) !important;
+  color: white !important;
+}
+
+/* ============================================
+   MEJORAS DE MODALES
+   ============================================ */
+
+.ant-modal-content {
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-xl) !important;
+  overflow: hidden;
+}
+
+.ant-modal-header {
+  background: linear-gradient(to right, #fafafa 0%, #ffffff 100%) !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.06) !important;
+  padding: 20px 24px !important;
+}
+
+.ant-modal-title {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.ant-modal-body {
+  padding: 24px !important;
+}
+
+.ant-modal-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+  padding: 16px 24px !important;
+}
+
+/* ============================================
+   MEJORAS DE INPUTS Y FORMS
+   ============================================ */
+
+.ant-input,
+.ant-input-number,
+.ant-picker {
+  border-radius: var(--radius-md) !important;
+  transition: all 0.3s ease !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.ant-input:hover,
+.ant-input-number:hover,
+.ant-picker:hover {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1) !important;
+}
+
+.ant-input:focus,
+.ant-input-number:focus,
+.ant-picker:focus,
+.ant-input-focused,
+.ant-input-number-focused,
+.ant-picker-focused {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.15) !important;
+}
+
+.ant-form-item-label > label {
+  font-weight: 500 !important;
+  color: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* ============================================
+   MEJORAS DE TOOLTIPS
+   ============================================ */
+
+.ant-tooltip-inner {
+  border-radius: var(--radius-md) !important;
+  padding: 8px 12px !important;
+  font-size: 13px !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* ============================================
+   MEJORAS DE PROGRESS BARS
+   ============================================ */
+
+.ant-progress-bg {
+  background: var(--gradient-info) !important;
+}
+
+.ant-progress-success-bg {
+  background: var(--gradient-success) !important;
+}
+
+/* ============================================
+   MEJORAS DE EMPTY STATES
+   ============================================ */
+
+.ant-empty {
+  padding: 40px 20px !important;
+}
+
+.ant-empty-description {
+  color: rgba(0, 0, 0, 0.45) !important;
+  font-size: 14px !important;
+}
+
+/* ============================================
+   MEJORAS DE DIVIDERS
+   ============================================ */
+
+.ant-divider {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  margin: 24px 0 !important;
+}
+
+.ant-divider-horizontal.ant-divider-with-text {
+  font-weight: 600 !important;
+  color: rgba(0, 0, 0, 0.65) !important;
+}
+
+/* ============================================
+   MEJORAS DE SPACE
+   ============================================ */
+
+.ant-space {
+  gap: var(--spacing-md) !important;
+}
+
+/* Mejora de inputs en móvil */
+@media (max-width: 576px) {
+  .ant-input,
+  .ant-input-number,
+  .ant-picker {
+    font-size: 16px; /* Previene zoom en iOS */
+  }
+}
+
+/* ============================================
+   ANIMACIONES GLOBALES
+   ============================================ */
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Aplicar animaciones a elementos */
+.ant-row > .ant-col {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.ant-row > .ant-col:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.ant-row > .ant-col:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.ant-row > .ant-col:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.ant-row > .ant-col:nth-child(4) {
+  animation-delay: 0.4s;
+}
