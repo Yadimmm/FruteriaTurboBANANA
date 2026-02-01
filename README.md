@@ -42,17 +42,21 @@ Este proyecto es una aplicación web para la gestión integral de una frutería,
 Clonar el repositorio:
 
 ```bash
-git clone <URL_DE_TU_REPOSITORIO>
-cd <NOMBRE_DEL_PROYECTO>
+## Instalación
+
+Clonar el repositorio:
+
+git clone https://github.com/Yadimmm/FruteriaTurboBANANA.git
+cd FruteriaTurboBANANA
 #Instalar dependencias:
 npm install
 # o
 yarn install
+
 Ejecución
 
 Iniciar la aplicación en modo desarrollo:
 
-bash
 npm run dev
 # o
 yarn dev
